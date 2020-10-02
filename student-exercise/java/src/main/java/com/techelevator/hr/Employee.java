@@ -81,7 +81,7 @@ public class Employee extends Person implements Billable {
 				total += servicesRendered.get(services);
 				
 		}		
-				return total + employeeDiscount;
+				return total - employeeDiscount;
 	}
 	
 	

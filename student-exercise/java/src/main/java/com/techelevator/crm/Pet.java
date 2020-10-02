@@ -1,13 +1,14 @@
 package com.techelevator.crm;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Pet {
 	
 	private String name;
 	private String species;
-	private List<String> vaccinations = new ArrayList<>();
+	private List<String> vaccinations;
 
 	public String getName() {
 		return name;
@@ -31,12 +32,18 @@ public class Pet {
 	public Pet(String name, String species) {
 		this.name = name;
 		this.species = species;
+		vaccinations = new ArrayList<String>();
 	}
 	
 	public String listVaccinations() {
 		String output = "";
-		for(String vaccination : vaccinations ) {
-			output = vaccination + ", ";
+		
+		
+		for(int i = 0; i<vaccinations.size(); i++) {
+			output += vaccinations.get(i);
+			if(i != vaccinations.size()-1) {
+				output += ", ";
+			}
 		
 		}
 			return output;

@@ -2,6 +2,8 @@ package com.techelevator.hr;
 
 import org.junit.Test;
 
+import com.techelevator.Billable;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,6 +41,12 @@ public class EmployeeTests {
 
     @Test
     public void getBalanceDue() {
-        fail("IMPLEMENT ME");
+        Employee employee = new Employee("Test", "Testerson");
+        Map<String, Double> testServices = new HashMap<>();
+        testServices.put("Walking", 10.00);
+        testServices.put("Grooming", 20.00);
+        
+        assertEquals("Returned the wrong balance.", 25, employee.getBalanceDue(testServices), 0.0);
+        
     }
 }
