@@ -23,10 +23,11 @@ public class PetTests {
 		vaccination.add("Rabies");
 		vaccination.add("Distemper");
 		vaccination.add("Parvo");
+		pet.setVaccinations(vaccination);
 		
-		//Assert.assertEquals("Rabies Distemper Parvo", "Rabies, Distemper, Parvo", pet.listVaccinations());
 		
-		Assert.assertEquals("Rabies, Distemper, Parvo", pet.listVaccinations());
+		Assert.assertEquals("No match", "Rabies, Distemper, Parvo", pet.listVaccinations());
+		
 		
 		
 	}
