@@ -12,7 +12,7 @@ import org.junit.Test;
 public class CustomerTests {
 
 	 @Test
-	    public void getBalanceDue() {
+	    public void should_return_total_balance_of_services() {
 	        Customer customer = new Customer("Test", "Testerson");
 	        Map<String, Double> testServices = new HashMap<>();
 	        testServices.put("Walking", 10.00);

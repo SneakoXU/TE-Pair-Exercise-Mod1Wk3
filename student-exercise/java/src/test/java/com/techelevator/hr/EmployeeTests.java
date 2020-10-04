@@ -40,7 +40,7 @@ public class EmployeeTests {
 
 
     @Test
-    public void getBalanceDue() {
+    public void getBalanceDue_EmployeeDiscount() {
         Employee employee = new Employee("Test", "Testerson");
         Map<String, Double> testServices = new HashMap<>();
         testServices.put("Walking", 10.00);
